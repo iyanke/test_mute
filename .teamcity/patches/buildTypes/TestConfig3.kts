@@ -14,8 +14,6 @@ create(DslContext.projectId, BuildType({
     name = "Test config3"
 
     failureConditions {
-        javaCrash = false
-        supportTestRetry = true
     }
 }))
 
