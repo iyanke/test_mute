@@ -9,6 +9,9 @@ To apply the patch, change the buildType with id = 'TestConfig3'
 accordingly, and delete the patch script.
 */
 changeBuildType(RelativeId("TestConfig3")) {
+    expectTemplates()
+    templates = arrayListOf(RelativeId("Xxx"))
+
     failureConditions {
 
         check(javaCrash == false) {
@@ -20,10 +23,5 @@ changeBuildType(RelativeId("TestConfig3")) {
             "Unexpected option value: supportTestRetry = $supportTestRetry"
         }
         supportTestRetry = false
-
-        check(errorMessage == false) {
-            "Unexpected option value: errorMessage = $errorMessage"
-        }
-        errorMessage = false
     }
 }
