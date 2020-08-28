@@ -38,10 +38,5 @@ changeBuildType(RelativeId("TestConfig3")) {
             "Unexpected option value: javaCrash = $javaCrash"
         }
         javaCrash = true
-
-        check(errorMessage == false) {
-            "Unexpected option value: errorMessage = $errorMessage"
-        }
-        errorMessage = false
     }
 }
