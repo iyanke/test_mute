@@ -146,7 +146,7 @@ object TestConfig : BuildType({
     }
 
     failureConditions {
-        supportTestRetry = true
+        supportTestRetry = false
     }
 
     features {
