@@ -16,9 +16,9 @@ changeBuildType(RelativeId("TestConfig3")) {
         }
         javaCrash = true
 
-        check(supportTestRetry == true) {
-            "Unexpected option value: supportTestRetry = $supportTestRetry"
+        check(errorMessage == false) {
+            "Unexpected option value: errorMessage = $errorMessage"
         }
-        supportTestRetry = false
+        errorMessage = true
     }
 }
