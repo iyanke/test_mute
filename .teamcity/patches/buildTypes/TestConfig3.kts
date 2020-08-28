@@ -17,18 +17,6 @@ changeBuildType(RelativeId("TestConfig3")) {
             script {
                 scriptContent = """
                     echo "##teamcity[testStarted name='MyTest1.test6']"
-                    echo "##teamcity[testFailed name='MyTest1.test6 message='failure message' details='message and stack trace']"
-                    echo "##teamcity[testFinished name='MyTest1.test6]"
-                    
-                    echo "##teamcity[testStarted name='MyTest1.test6"
-                    echo "##teamcity[testFailed name='MyTest1.test6' message='failure message' details='message and stack trace']"
-                    echo "##teamcity[testFinished name='MyTest1.test6']"
-                    
-                    echo "##teamcity[testStarted name='MyTest1.test6']"
-                    echo "##teamcity[testFailed name='MyTest1.test6' message='failure message' details='message and stack trace']"
-                    echo "##teamcity[testFinished name='MyTest1.test6']"
-                    
-                    echo "##teamcity[testStarted name='MyTest1.test6']"
                     echo "##teamcity[testFinished name='MyTest1.test6']"
                 """.trimIndent()
             }
