@@ -36,51 +36,12 @@ create(DslContext.projectId, BuildType({
         }
         script {
             scriptContent = """
-                echo "##teamcity[testStarted name='MyTest1.test1']"
-                echo "##teamcity[testFinished name='MyTest1.test1']"
+                echo "##teamcity[testStarted name='MyTest2.testX']"
+                echo "##teamcity[testFailed name='MyTest2.testX' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest2.testX']"
                 
-                echo "##teamcity[testStarted name='MyTest1.test1']"
-                echo "##teamcity[testFailed name='MyTest1.test1' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test1']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test1']"
-                echo "##teamcity[testFailed name='MyTest1.test1' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test1']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test1']"
-                echo "##teamcity[testFailed name='MyTest1.test1' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test1']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test1']"
-                echo "##teamcity[testFinished name='MyTest1.test1']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test2']"
-                echo "##teamcity[testFailed name='MyTest1.test2' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test2']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test2']"
-                echo "##teamcity[testFinished name='MyTest1.test2']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test3']"
-                echo "##teamcity[testFailed name='MyTest1.test3' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test3']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test3']"
-                echo "##teamcity[testFinished name='MyTest1.test3']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test4']"
-                echo "##teamcity[testFailed name='MyTest1.test4' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test4']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test4']"
-                echo "##teamcity[testFinished name='MyTest1.test4']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test5']"
-                echo "##teamcity[testFailed name='MyTest1.test5' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest1.test5']"
-                
-                echo "##teamcity[testStarted name='MyTest1.test5']"
-                echo "##teamcity[testFinished name='MyTest1.test5']"
+                echo "##teamcity[testStarted name='MyTest2.testX']"
+                echo "##teamcity[testFinished name='MyTest2.testX']"
             """.trimIndent()
         }
         script {
