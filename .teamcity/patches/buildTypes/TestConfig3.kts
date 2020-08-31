@@ -59,6 +59,7 @@ changeBuildType(RelativeId("TestConfig3")) {
         }
         insert(1) {
             script {
+                executionMode = BuildStep.ExecutionMode.RUN_ON_FAILURE
                 scriptContent = """
                     echo "##teamcity[testStarted name='MyTest1.test6']"
                     echo "##teamcity[testFailed name='MyTest1.test6 message='failure message' details='message and stack trace']"
