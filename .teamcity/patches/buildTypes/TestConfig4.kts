@@ -37,10 +37,10 @@ create(DslContext.projectId, BuildType({
         script {
             scriptContent = """
                 echo "##teamcity[testStarted name='MyTest2.testX']"
-                echo "##teamcity[testFailed name='MyTest2.testX' message='failure ' details='test testX failed']"
                 echo "##teamcity[testFinished name='MyTest2.testX']"
                 
                 echo "##teamcity[testStarted name='MyTest2.testX']"
+                echo "##teamcity[testFailed name='MyTest2.testX' message='failure ' details='test testX failed']"
                 echo "##teamcity[testFinished name='MyTest2.testX']"
             """.trimIndent()
         }
