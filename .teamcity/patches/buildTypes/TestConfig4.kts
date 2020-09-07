@@ -36,19 +36,22 @@ create(DslContext.projectId, BuildType({
         }
         script {
             scriptContent = """
-                echo "##teamcity[testStarted name='MyTest2.testX']"
-                echo "##teamcity[testFinished name='MyTest2.testX']"
+                echo "##teamcity[testStarted name='MyTest2.test1']"
+                echo "##teamcity[testFinished name='MyTest2.test1']"
                 
-                echo "##teamcity[testStarted name='MyTest2.testX']"
-                echo "##teamcity[testFailed name='MyTest2.testX' message='failure ' details='test testX failed']"
-                echo "##teamcity[testFinished name='MyTest2.testX']"
+                echo "##teamcity[testStarted name='MyTest2.test1']"
+                echo "##teamcity[testFailed name='MyTest2.test1' message='failure ' details='test testX failed']"
+                echo "##teamcity[testFinished name='MyTest2.test1']"
                 
-                echo "##teamcity[testStarted name='MyTest2.testX']"
-                echo "##teamcity[testFinished name='MyTest2.testX']"
+                echo "##teamcity[testStarted name='MyTest2.test1']"
+                echo "##teamcity[testFinished name='MyTest2.test1']"
                 
-                echo "##teamcity[testStarted name='MyTest2.testY']"
-                echo "##teamcity[testFailed name='MyTest2.testY' message='failure ' details='test testX failed']"
-                echo "##teamcity[testFinished name='MyTest2.testY']"
+                echo "##teamcity[testStarted name='MyTest2.test2']"
+                echo "##teamcity[testFailed name='MyTest2.test2' message='failure ' details='test testX failed']"
+                echo "##teamcity[testFinished name='MyTest2.test2']"
+                
+                echo "##teamcity[testStarted name='MyTest2.test2']"
+                echo "##teamcity[testFinished name='MyTest2.test2']"
             """.trimIndent()
         }
         script {
