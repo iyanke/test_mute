@@ -143,4 +143,12 @@ changeBuildType(RelativeId("TestConfig")) {
             }
         }
     }
+
+    failureConditions {
+
+        check(supportTestRetry == false) {
+            "Unexpected option value: supportTestRetry = $supportTestRetry"
+        }
+        supportTestRetry = true
+    }
 }
