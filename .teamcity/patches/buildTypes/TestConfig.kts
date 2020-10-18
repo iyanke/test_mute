@@ -1,6 +1,7 @@
 package patches.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2019_2.*
+import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.ScriptBuildStep
 import jetbrains.buildServer.configs.kotlin.v2019_2.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.v2019_2.ui.*
 
@@ -120,6 +121,10 @@ changeBuildType(RelativeId("TestConfig")) {
         }
     }
     steps {
+        update<ScriptBuildStep>(4) {
+            enabled = false
+            clearConditions()
+        }
         insert(5) {
             script {
                 name = "1"
