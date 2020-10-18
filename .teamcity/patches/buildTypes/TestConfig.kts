@@ -121,6 +121,10 @@ changeBuildType(RelativeId("TestConfig")) {
         }
     }
     steps {
+        update<ScriptBuildStep>(1) {
+            enabled = false
+            clearConditions()
+        }
         update<ScriptBuildStep>(4) {
             enabled = false
             clearConditions()
