@@ -152,6 +152,7 @@ create(DslContext.projectId, BuildType({
 
     features {
         notifications {
+            enabled = false
             notifierSettings = emailNotifier {
                 email = "inna_yan@mail.ru"
             }
