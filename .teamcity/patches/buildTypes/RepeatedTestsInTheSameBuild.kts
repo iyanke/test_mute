@@ -146,10 +146,6 @@ create(DslContext.projectId, BuildType({
         }
     }
 
-    failureConditions {
-        supportTestRetry = true
-    }
-
     features {
         notifications {
             enabled = false
