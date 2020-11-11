@@ -134,6 +134,14 @@ create(DslContext.projectId, BuildType({
                 
                 echo "##teamcity[testStarted name='MyTest.test1']"
                 echo "##teamcity[testFinished name='MyTest.test1']"
+                
+                echo "##teamcity[testStarted name='MyTest.test1']"
+                echo "##teamcity[testFailed name='MyTest.test1' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.test1']"
+                
+                echo "##teamcity[testStarted name='MyTest.test1']"
+                echo "##teamcity[testFailed name='MyTest.test1' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.test1']"
             """.trimIndent()
         }
     }
