@@ -121,6 +121,50 @@ changeBuildType(RelativeId("TestConfig")) {
         }
     }
     steps {
+        update<ScriptBuildStep>(0) {
+            enabled = true
+            clearConditions()
+            scriptContent = """
+                echo "##teamcity[testSuiteStarted name='suiteName1']"
+                
+                echo "##teamcity[testStarted name='MyTest.test1']"
+                echo "##teamcity[testFailed name='MyTest.test1' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.test1']"
+                
+                echo "##teamcity[testStarted name='MyTest.XXX1']"
+                echo "##teamcity[testFailed name='MyTest.XXX1' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.XXX1']"
+                
+                
+                echo "##teamcity[testSuiteFinished name='suiteName1']"
+                
+                echo "##teamcity[testSuiteStarted name='suiteName2']"
+                
+                echo "##teamcity[testStarted name='MyTest.test2']"
+                echo "##teamcity[testFailed name='MyTest.test2' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.test2']"
+                
+                echo "##teamcity[testStarted name='MyTest.XXX2']"
+                echo "##teamcity[testFailed name='MyTest.XXX2' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.XXX2']"
+                
+                
+                echo "##teamcity[testSuiteFinished name='suiteName2']"
+                
+                echo "##teamcity[testSuiteStarted name='suiteName3']"
+                
+                echo "##teamcity[testStarted name='MyTest.test3']"
+                echo "##teamcity[testFailed name='MyTest.test3' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.test3']"
+                
+                echo "##teamcity[testStarted name='MyTest.XXX3]"
+                echo "##teamcity[testFailed name='MyTest.XXX3' message='failure message' details='message and stack trace']"
+                echo "##teamcity[testFinished name='MyTest.XXX3']"
+                
+                
+                echo "##teamcity[testSuiteFinished name='suiteName3']"
+            """.trimIndent()
+        }
         update<ScriptBuildStep>(1) {
             enabled = false
             clearConditions()
