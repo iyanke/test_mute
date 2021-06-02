@@ -39,6 +39,12 @@ create(DslContext.projectId, BuildType({
                 echo "##teamcity[testSuiteFinished name='suiteName']"
             """.trimIndent()
         }
+        script {
+            scriptContent = """
+                echo ##teamcity[testStarted name='Test1']
+                echo ##teamcity[testFinished name='Test1' duration='0']
+            """.trimIndent()
+        }
     }
 
     failureConditions {
