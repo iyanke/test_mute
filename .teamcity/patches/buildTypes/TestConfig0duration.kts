@@ -17,24 +17,6 @@ create(DslContext.projectId, BuildType({
 
     steps {
         script {
-            enabled = false
-            executionMode = BuildStep.ExecutionMode.RUN_ON_FAILURE
-            scriptContent = """
-                echo "##teamcity[testSuiteStarted name='suiteName']"
-                
-                echo "##teamcity[testStarted name='MyTest.test2']"
-                echo "##teamcity[testFailed name='MyTest.test2' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest.test2']"
-                
-                echo "##teamcity[testStarted name='MyTest.XXX']"
-                echo "##teamcity[testFailed name='MyTest.XXX' message='failure message' details='message and stack trace']"
-                echo "##teamcity[testFinished name='MyTest.XXX']"
-                
-                
-                echo "##teamcity[testSuiteFinished name='suiteName']"
-            """.trimIndent()
-        }
-        script {
             scriptContent = """
                 echo "##teamcity[testStarted name='MyTest1.test1']"
                 echo "##teamcity[testFinished name='MyTest1.test1']"
