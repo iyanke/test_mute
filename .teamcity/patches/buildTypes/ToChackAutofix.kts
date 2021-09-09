@@ -109,7 +109,6 @@ create(DslContext.projectId, BuildType({
         }
         script {
             name = "XXX"
-            enabled = false
             executionMode = BuildStep.ExecutionMode.RUN_ON_FAILURE
             scriptContent = """
                 echo "##teamcity[testStarted name='MyTest1.XXX']"
