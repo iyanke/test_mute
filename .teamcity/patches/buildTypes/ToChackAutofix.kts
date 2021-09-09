@@ -35,6 +35,7 @@ create(DslContext.projectId, BuildType({
             """.trimIndent()
         }
         script {
+            enabled = false
             scriptContent = """
                 echo "##teamcity[testStarted name='MyTest1.test1']"
                 echo "##teamcity[testFinished name='MyTest1.test1']"
