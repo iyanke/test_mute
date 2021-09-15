@@ -41,7 +41,7 @@ create(DslContext.projectId, BuildType({
         }
         script {
             scriptContent = """
-                for tjk hgfkj -=
+                ::for tjk hgfkj -=
                 echo ##teamcity[testStarted name='Test1']
                 echo ##teamcity[testFinished name='Test1' duration='0']
                 
