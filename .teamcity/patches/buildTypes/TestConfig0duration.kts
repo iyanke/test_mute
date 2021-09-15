@@ -45,7 +45,7 @@ create(DslContext.projectId, BuildType({
                 echo ##teamcity[testFinished name='Test1' duration='0']
                 
                 echo "##teamcity[testStarted name='Test6']"
-                echo "##teamcity[testFailed name='Test6' message='failure message' details='message and stack trace']"
+                ::echo "##teamcity[testFailed name='Test6' message='failure message' details='message and stack trace']"
                 echo "##teamcity[testFinished name='Test6']"
             """.trimIndent()
         }
