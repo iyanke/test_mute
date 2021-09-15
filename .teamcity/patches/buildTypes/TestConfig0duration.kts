@@ -41,6 +41,7 @@ create(DslContext.projectId, BuildType({
         }
         script {
             scriptContent = """
+                dfdfdfdf
                 echo ##teamcity[testStarted name='Test1']
                 echo ##teamcity[testFinished name='Test1' duration='0']
                 
