@@ -180,16 +180,32 @@ changeBuildType(RelativeId("TestConfig")) {
                     echo "##teamcity[testFailed name='MyTest.test1' message='failure message' details='message and stack trace']"
                     echo "##teamcity[testFinished name='MyTest.test1']"
                     
-                    echo "##teamcity[testStarted name='MyTest.test1']"
-                    echo "##teamcity[testFinished name='MyTest.test1']"
-                    
-                    cho "##teamcity[testStarted name='MyTest.test7']"
+                    echo "##teamcity[testStarted name='MyTest.test7']"
                     echo "##teamcity[testFailed name='MyTest.test7' message='failure message' details='message and stack trace']"
                     echo "##teamcity[testFinished name='MyTest.test7']"
                     
                     echo "##teamcity[testStarted name='MyTest.test8']"
                     echo "##teamcity[testFailed name='MyTest.test8' message='failure message' details='message and stack trace']"
                     echo "##teamcity[testFinished name='MyTest.test8']"
+                    
+                    echo "##teamcity[testStarted name='MyTest.test9']"
+                    echo "##teamcity[testFailed name='MyTest.test9' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testFinished name='MyTest.test9']"
+                    
+                    echo "##teamcity[testStarted name='MyTest.test6']"
+                    echo "##teamcity[testFailed name='MyTest.test6' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testFinished name='MyTest.test6']"
+                    echo "##teamcity[testStarted name='MyTest.test5']"
+                    echo "##teamcity[testFailed name='MyTest.test5' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testFinished name='MyTest.test5']"
+                    
+                    echo "##teamcity[testStarted name='MyTest.test3']"
+                    echo "##teamcity[testFailed name='MyTest.test3' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testFinished name='MyTest.test3']"
+                    
+                    echo "##teamcity[testStarted name='MyTest.test4']"
+                    echo "##teamcity[testFailed name='MyTest.test4' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testFinished name='MyTest.test4']"
                 """.trimIndent()
             }
         }
