@@ -122,7 +122,6 @@ changeBuildType(RelativeId("TestConfig")) {
     }
     steps {
         update<ScriptBuildStep>(0) {
-            enabled = true
             clearConditions()
             scriptContent = """
                 echo "##teamcity[testSuiteStarted name='suiteName1']"
@@ -203,4 +202,7 @@ changeBuildType(RelativeId("TestConfig")) {
         }
         supportTestRetry = true
     }
+
+    expectDisabledSettings()
+    updateDisabledSettings("RUNNER_1")
 }
