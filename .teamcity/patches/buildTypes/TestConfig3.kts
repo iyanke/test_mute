@@ -15,6 +15,7 @@ changeBuildType(RelativeId("TestConfig3")) {
     steps {
         insert(0) {
             script {
+                enabled = false
                 scriptContent = """
                     wewe echo "##teamcity[testStarted name='MyTest1.test6']"
                     echo "##teamcity[testFailed name='MyTest1.test6' message='failure message' details='message and stack trace']"
