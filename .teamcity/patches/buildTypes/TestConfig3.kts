@@ -68,6 +68,10 @@ changeBuildType(RelativeId("TestConfig3")) {
                     
                     echo "##teamcity[testStarted name='MyTest1.test7']"
                     echo "##teamcity[testFinished name='MyTest1.test7']"
+                    
+                    echo "##teamcity[testStarted name='MyTest1.test8']"
+                    echo "##teamcity[testMuted name='MyTest1.test8' message='failure message' details='message and stack trace']"
+                    echo "##teamcity[testFinished name='MyTest1.test8']"
                 """.trimIndent()
             }
         }
